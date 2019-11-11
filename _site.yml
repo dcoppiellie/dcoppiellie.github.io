@@ -1,0 +1,10 @@
+name: "Portfolio Website"
+navbar:
+  title: "Portfolio Website"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About Me"
+      href: about.html
+    - text: "Case Study 1"
+      href: PresentationFile1.html
