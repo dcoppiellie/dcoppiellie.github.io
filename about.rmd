@@ -1,0 +1,25 @@
+---
+title: "About"
+author: "David"
+date: "11/11/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About Me 
+
+- Interesting Information
+  - Name: David Coppiellie
+  - Picture: ![Alt text](C:\Users\Owner\Desktop\SMU DataScience\DS6306\Unit 12\Portfolio Website Main\Portfolio Website_3\WebsiteFinal\Website Picture.jpg)
+  - From: Detroit
+  - Interests: Sports
+  - Work: Patent Counsel
+  - School: UD, UDM, UM, SMU
+<br>
+<br>
+<br>
+<br>
+The other tabs represent major accomplishments during my time as a graduate student at SMU.  Please feel free to read them.
