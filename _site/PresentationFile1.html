@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budweiser</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+  <meta name="date" content="2019-10-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'Budweiser',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                      },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Home Team Data' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <link href="site_libs/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
+  <link href="site_libs/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
+  <link href="site_libs/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
+  <script src="site_libs/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/prettify/prettify.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/hammer.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/slide-controller.js"></script>
+  <script src="site_libs/ioslides-13.5.1/js/slide-deck.js"></script>
+  <script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+  <script src="site_libs/plotly-binding-4.9.0/plotly.js"></script>
+  <script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+  <link href="site_libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+  <script src="site_libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    summary {
+      display: list-item;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+/* https://github.com/ropensci/plotly/pull/524#issuecomment-468142578 */
+slide:not(.current) .plotly.html-widget{
+  display: block;
+}
+
+  </style>
+
+
+</head>
+
+<body style="opacity: 0">
+
+<slides>
+
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;">10/25/2019</p>
+          </hgroup>
+  </slide>
+
+<slide class=""><hgroup><h2>Introduction</h2></hgroup><article  id="introduction" class="smaller ">
+
+<ul>
+<li>Project – Budweiser Data Discovery and Analysis
+
+<ul>
+<li>Team Members
+
+<ul>
+<li>Marc Carter</li>
+<li>Gavin Rick</li>
+<li>David Coppiellie <br> <br> <br> <br> Thank You, Mr. Doukeris and Mr. Jamel for this and future opportunities to provide data insight and analysis for your team at Budweiser</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>Presentation: <a href='https://www.youtube.com/watch?v=RwETl6hMuu8&amp;t=7s' title=''>Project 1</a></p>
+
+</article></slide><slide class=""><hgroup><h2>Review of Tasks</h2></hgroup><article  id="review-of-tasks" class="smaller ">
+
+<ul>
+<li>Provide analysis of the data supplied by the Budweiser team to include…
+
+<ul>
+<li>Breweries per state</li>
+<li>Statistics of ABV and IBU</li>
+<li>The relationship between ABV and IBU
+
+<ul>
+<li>Specifically look into the relationship between IPA’s and other Ale’s</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Our process</h2></hgroup><article  id="our-process" class="smaller ">
+
+<ul>
+<li>Import and Clean Data</li>
+<li>Inspect data for obvious inconsistencies</li>
+<li>Decisions on missing data
+
+<ul>
+<li>Look for other methods to fill in missing data</li>
+</ul></li>
+<li>Import supporting data (as needed)
+
+<ul>
+<li>State information</li>
+</ul></li>
+<li>Complete analysis tasks</li>
+<li>Look for other useful information</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Breweries Per State</h2></hgroup><article  id="breweries-per-state" class="smaller ">
+
+<div id="htmlwidget-18af8d89ff5aa9c136dc" style="width:720px;height:432px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-18af8d89ff5aa9c136dc">{"x":{"visdat":{"65b863fa420":["function () ","plotlyVisDat"]},"cur_data":"65b863fa420","attrs":{"65b863fa420":{"locationmode":"USA-states","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":[-153.369141,-86.902298,-92.199997,-111.093735,-119.417931,-105.358887,-72.699997,-75.2,-75.5,-81.760254,-83.441162,-158.214676,-93.581543,-114.742043,-89,-86.126976,-98,-84.27002,-92.329102,-71.382439,-76.641273,-68.972168,-84.506836,-94.63623,-92.60376,-90,-109.533691,-80.793457,-100.437012,-100,-71.5,-74.871826,-106.018066,-117.224121,-75,-82.996216,-96.921387,-120.5,-77.194527,-71.5,-81.163727,-100,-86.660156,-100,-111.950684,-78.024902,-72.699997,-120.740135,-89.5,-80.5,-107.290283],"y":[66.160507,32.31823,34.799999,34.048927,36.778259,39.113014,41.599998,39,39,27.994402,33.247875,20.716179,42.032974,44.068203,40,40.273502,38.5,37.839333,30.39183,42.407211,39.045753,45.367584,44.182205,46.39241,38.573936,33,46.96526,35.782169,47.650589,41.5,44,39.833851,34.307144,39.876019,43,40.367474,36.084621,44,41.203323,41.700001,33.836082,44.5,35.860119,31,39.41922,37.926868,44,47.751076,44.5,39,43.07597],"type":"scatter","mode":"markers","size":[7,3,2,11,39,47,8,1,2,15,7,4,5,5,18,22,3,4,5,23,7,9,32,12,9,2,9,19,1,5,3,3,4,2,16,15,6,29,25,5,4,1,3,28,4,16,10,23,20,1,4],"color":[7,3,2,11,39,47,8,1,2,15,7,4,5,5,18,22,3,4,5,23,7,9,32,12,9,2,9,19,1,5,3,3,4,2,16,15,6,29,25,5,4,1,3,28,4,16,10,23,20,1,4],"colors":"Reds","hoverinfo":"text","text":["State : Alaska<br />Population =   2,454,636<br />Breweries Count : 7<br />","State : Alabama<br />Population =  16,936,626<br />Breweries Count : 3<br />","State : Arkansas<br />Population =  10,389,634<br />Breweries Count : 2<br />","State : Arizona<br />Population =  24,745,828<br />Breweries Count : 11<br />","State : California<br />Population = 136,585,470<br />Breweries Count : 39<br />","State : Colorado<br />Population =  19,674,750<br />Breweries Count : 47<br />","State : Connecticut<br />Population =  12,483,198<br />Breweries Count : 8<br />","State : District Of Columbia<br />Population =   2,474,750<br />Breweries Count : 1<br />","State : Delaware<br />Population =   3,373,472<br />Breweries Count : 2<br />","State : Florida<br />Population =  75,023,872<br />Breweries Count : 15<br />","State : Georgia<br />Population =  35,967,464<br />Breweries Count : 7<br />","State : Hawaii<br />Population =   4,808,406<br />Breweries Count : 4<br />","State : Iowa<br />Population =  10,877,898<br />Breweries Count : 5<br />","State : Idaho<br />Population =   5,969,748<br />Breweries Count : 5<br />","State : Illinois<br />Population =  44,173,212<br />Breweries Count : 18<br />","State : Indiana<br />Population =  23,057,116<br />Breweries Count : 22<br />","State : Kansas<br />Population =   9,897,734<br />Breweries Count : 3<br />","State : Kentucky<br />Population =  15,441,770<br />Breweries Count : 4<br />","State : Louisiana<br />Population =  16,037,990<br />Breweries Count : 5<br />","State : Massachusetts<br />Population =  24,232,282<br />Breweries Count : 23<br />","State : Maryland<br />Population =  20,897,730<br />Breweries Count : 7<br />","State : Maine<br />Population =   4,752,558<br />Breweries Count : 9<br />","State : Michigan<br />Population =  34,834,650<br />Breweries Count : 32<br />","State : Minnesota<br />Population =  19,406,534<br />Breweries Count : 12<br />","State : Missouri<br />Population =  21,212,060<br />Breweries Count : 9<br />","State : Mississippi<br />Population =  10,229,714<br />Breweries Count : 2<br />","State : Montana<br />Population =   3,697,354<br />Breweries Count : 9<br />","State : North Carolina<br />Population =  35,719,138<br />Breweries Count : 19<br />","State : North Dakota<br />Population =   2,588,920<br />Breweries Count : 1<br />","State : Nebraska<br />Population =   6,574,864<br />Breweries Count : 5<br />","State : New Hampshire<br />Population =   4,793,578<br />Breweries Count : 3<br />","State : New Jersey<br />Population =  31,050,782<br />Breweries Count : 3<br />","State : New Mexico<br />Population =   7,205,008<br />Breweries Count : 4<br />","State : Nevada<br />Population =  10,519,028<br />Breweries Count : 2<br />","State : New York<br />Population =  68,440,242<br />Breweries Count : 16<br />","State : Ohio<br />Population =  40,614,318<br />Breweries Count : 15<br />","State : Oklahoma<br />Population =  13,466,544<br />Breweries Count : 6<br />","State : Oregon<br />Population =  14,707,246<br />Breweries Count : 29<br />","State : Pennsylvania<br />Population =  44,880,334<br />Breweries Count : 25<br />","State : Rhode Island<br />Population =   3,699,368<br />Breweries Count : 5<br />","State : South Carolina<br />Population =  17,577,266<br />Breweries Count : 4<br />","State : South Dakota<br />Population =   3,008,726<br />Breweries Count : 1<br />","State : Tennessee<br />Population =  23,483,862<br />Breweries Count : 3<br />","State : Texas<br />Population =  97,218,612<br />Breweries Count : 28<br />","State : Utah<br />Population =  10,476,758<br />Breweries Count : 4<br />","State : Virginia<br />Population =  29,206,114<br />Breweries Count : 16<br />","State : Vermont<br />Population =   2,207,232<br />Breweries Count : 10<br />","State : Washington<br />Population =  26,085,110<br />Breweries Count : 23<br />","State : Wisconsin<br />Population =  20,219,824<br />Breweries Count : 20<br />","State : West Virginia<br />Population =   6,359,364<br />Breweries Count : 1<br />","State : Wyoming<br />Population =   1,986,214<br />Breweries Count : 4<br />"],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"mapType":"geo","title":"Breweries By State","geo":{"domain":{"x":[0,1],"y":[0,1]},"scope":"usa","projection":{"type":"albers usa"},"showland":true,"landcolor":"#B1B3B3","showlakes":true,"lakecolor":"#13294B","subunitcolor":"#C8102EC8","countrycolor":"rgba(217,217,217,1)","contrywidth":0.5,"subunitwidth":0.5},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"showSendToCloud":false},"data":[{"locationmode":"USA-states","type":"scattergeo","mode":"markers","hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"text":["State : Alaska<br />Population =   2,454,636<br />Breweries Count : 7<br />","State : Alabama<br />Population =  16,936,626<br />Breweries Count : 3<br />","State : Arkansas<br />Population =  10,389,634<br />Breweries Count : 2<br />","State : Arizona<br />Population =  24,745,828<br />Breweries Count : 11<br />","State : California<br />Population = 136,585,470<br />Breweries Count : 39<br />","State : Colorado<br />Population =  19,674,750<br />Breweries Count : 47<br />","State : Connecticut<br />Population =  12,483,198<br />Breweries Count : 8<br />","State : District Of Columbia<br />Population =   2,474,750<br />Breweries Count : 1<br />","State : Delaware<br />Population =   3,373,472<br />Breweries Count : 2<br />","State : Florida<br />Population =  75,023,872<br />Breweries Count : 15<br />","State : Georgia<br />Population =  35,967,464<br />Breweries Count : 7<br />","State : Hawaii<br />Population =   4,808,406<br />Breweries Count : 4<br />","State : Iowa<br />Population =  10,877,898<br />Breweries Count : 5<br />","State : Idaho<br />Population =   5,969,748<br />Breweries Count : 5<br />","State : Illinois<br />Population =  44,173,212<br />Breweries Count : 18<br />","State : Indiana<br />Population =  23,057,116<br />Breweries Count : 22<br />","State : Kansas<br />Population =   9,897,734<br />Breweries Count : 3<br />","State : Kentucky<br />Population =  15,441,770<br />Breweries Count : 4<br />","State : Louisiana<br />Population =  16,037,990<br />Breweries Count : 5<br />","State : Massachusetts<br />Population =  24,232,282<br />Breweries Count : 23<br />","State : Maryland<br />Population =  20,897,730<br />Breweries Count : 7<br />","State : Maine<br />Population =   4,752,558<br />Breweries Count : 9<br />","State : Michigan<br />Population =  34,834,650<br />Breweries Count : 32<br />","State : Minnesota<br />Population =  19,406,534<br />Breweries Count : 12<br />","State : Missouri<br />Population =  21,212,060<br />Breweries Count : 9<br />","State : Mississippi<br />Population =  10,229,714<br />Breweries Count : 2<br />","State : Montana<br />Population =   3,697,354<br />Breweries Count : 9<br />","State : North Carolina<br />Population =  35,719,138<br />Breweries Count : 19<br />","State : North Dakota<br />Population =   2,588,920<br />Breweries Count : 1<br />","State : Nebraska<br />Population =   6,574,864<br />Breweries Count : 5<br />","State : New Hampshire<br />Population =   4,793,578<br />Breweries Count : 3<br />","State : New Jersey<br />Population =  31,050,782<br />Breweries Count : 3<br />","State : New Mexico<br />Population =   7,205,008<br />Breweries Count : 4<br />","State : Nevada<br />Population =  10,519,028<br />Breweries Count : 2<br />","State : New York<br />Population =  68,440,242<br />Breweries Count : 16<br />","State : Ohio<br />Population =  40,614,318<br />Breweries Count : 15<br />","State : Oklahoma<br />Population =  13,466,544<br />Breweries Count : 6<br />","State : Oregon<br />Population =  14,707,246<br />Breweries Count : 29<br />","State : Pennsylvania<br />Population =  44,880,334<br />Breweries Count : 25<br />","State : Rhode Island<br />Population =   3,699,368<br />Breweries Count : 5<br />","State : South Carolina<br />Population =  17,577,266<br />Breweries Count : 4<br />","State : South Dakota<br />Population =   3,008,726<br />Breweries Count : 1<br />","State : Tennessee<br />Population =  23,483,862<br />Breweries Count : 3<br />","State : Texas<br />Population =  97,218,612<br />Breweries Count : 28<br />","State : Utah<br />Population =  10,476,758<br />Breweries Count : 4<br />","State : Virginia<br />Population =  29,206,114<br />Breweries Count : 16<br />","State : Vermont<br />Population =   2,207,232<br />Breweries Count : 10<br />","State : Washington<br />Population =  26,085,110<br />Breweries Count : 23<br />","State : Wisconsin<br />Population =  20,219,824<br />Breweries Count : 20<br />","State : West Virginia<br />Population =   6,359,364<br />Breweries Count : 1<br />","State : Wyoming<br />Population =   1,986,214<br />Breweries Count : 4<br />"],"marker":{"colorbar":{"title":"","ticklen":2},"cmin":1,"cmax":47,"colorscale":[["0","rgba(255,245,240,1)"],["0.0416666666666667","rgba(255,238,230,1)"],["0.0833333333333333","rgba(255,231,220,1)"],["0.125","rgba(254,224,210,1)"],["0.166666666666667","rgba(254,212,193,1)"],["0.208333333333333","rgba(253,199,177,1)"],["0.25","rgba(252,187,161,1)"],["0.291666666666667","rgba(253,174,145,1)"],["0.333333333333333","rgba(253,160,129,1)"],["0.375","rgba(252,146,114,1)"],["0.416666666666667","rgba(252,133,101,1)"],["0.458333333333333","rgba(252,120,87,1)"],["0.5","rgba(251,106,74,1)"],["0.541666666666667","rgba(247,92,64,1)"],["0.583333333333333","rgba(243,77,54,1)"],["0.625","rgba(239,59,44,1)"],["0.666666666666667","rgba(227,49,39,1)"],["0.708333333333333","rgba(215,37,34,1)"],["0.75","rgba(203,24,29,1)"],["0.791666666666667","rgba(190,21,26,1)"],["0.833333333333333","rgba(178,18,24,1)"],["0.875","rgba(165,15,21,1)"],["0.916666666666667","rgba(144,9,19,1)"],["0.958333333333333","rgba(123,3,16,1)"],["1","rgba(103,0,13,1)"]],"showscale":false,"color":[7,3,2,11,39,47,8,1,2,15,7,4,5,5,18,22,3,4,5,23,7,9,32,12,9,2,9,19,1,5,3,3,4,2,16,15,6,29,25,5,4,1,3,28,4,16,10,23,20,1,4],"size":[21.7391304347826,13.9130434782609,11.9565217391304,29.5652173913043,84.3478260869565,100,23.695652173913,10,11.9565217391304,37.3913043478261,21.7391304347826,15.8695652173913,17.8260869565217,17.8260869565217,43.2608695652174,51.0869565217391,13.9130434782609,15.8695652173913,17.8260869565217,53.0434782608696,21.7391304347826,25.6521739130435,70.6521739130435,31.5217391304348,25.6521739130435,11.9565217391304,25.6521739130435,45.2173913043478,10,17.8260869565217,13.9130434782609,13.9130434782609,15.8695652173913,11.9565217391304,39.3478260869565,37.3913043478261,19.7826086956522,64.7826086956522,56.9565217391304,17.8260869565217,15.8695652173913,10,13.9130434782609,62.8260869565217,15.8695652173913,39.3478260869565,27.6086956521739,53.0434782608696,47.1739130434783,10,15.8695652173913],"sizemode":"area","line":{"colorbar":{"title":"","ticklen":2},"cmin":1,"cmax":47,"colorscale":[["0","rgba(255,245,240,1)"],["0.0416666666666667","rgba(255,238,230,1)"],["0.0833333333333333","rgba(255,231,220,1)"],["0.125","rgba(254,224,210,1)"],["0.166666666666667","rgba(254,212,193,1)"],["0.208333333333333","rgba(253,199,177,1)"],["0.25","rgba(252,187,161,1)"],["0.291666666666667","rgba(253,174,145,1)"],["0.333333333333333","rgba(253,160,129,1)"],["0.375","rgba(252,146,114,1)"],["0.416666666666667","rgba(252,133,101,1)"],["0.458333333333333","rgba(252,120,87,1)"],["0.5","rgba(251,106,74,1)"],["0.541666666666667","rgba(247,92,64,1)"],["0.583333333333333","rgba(243,77,54,1)"],["0.625","rgba(239,59,44,1)"],["0.666666666666667","rgba(227,49,39,1)"],["0.708333333333333","rgba(215,37,34,1)"],["0.75","rgba(203,24,29,1)"],["0.791666666666667","rgba(190,21,26,1)"],["0.833333333333333","rgba(178,18,24,1)"],["0.875","rgba(165,15,21,1)"],["0.916666666666667","rgba(144,9,19,1)"],["0.958333333333333","rgba(123,3,16,1)"],["1","rgba(103,0,13,1)"]],"showscale":false,"color":[7,3,2,11,39,47,8,1,2,15,7,4,5,5,18,22,3,4,5,23,7,9,32,12,9,2,9,19,1,5,3,3,4,2,16,15,6,29,25,5,4,1,3,28,4,16,10,23,20,1,4]}},"textfont":{"size":[21.7391304347826,13.9130434782609,11.9565217391304,29.5652173913043,84.3478260869565,100,23.695652173913,10,11.9565217391304,37.3913043478261,21.7391304347826,15.8695652173913,17.8260869565217,17.8260869565217,43.2608695652174,51.0869565217391,13.9130434782609,15.8695652173913,17.8260869565217,53.0434782608696,21.7391304347826,25.6521739130435,70.6521739130435,31.5217391304348,25.6521739130435,11.9565217391304,25.6521739130435,45.2173913043478,10,17.8260869565217,13.9130434782609,13.9130434782609,15.8695652173913,11.9565217391304,39.3478260869565,37.3913043478261,19.7826086956522,64.7826086956522,56.9565217391304,17.8260869565217,15.8695652173913,10,13.9130434782609,62.8260869565217,15.8695652173913,39.3478260869565,27.6086956521739,53.0434782608696,47.1739130434783,10,15.8695652173913]},"geo":"geo","lat":[66.160507,32.31823,34.799999,34.048927,36.778259,39.113014,41.599998,39,39,27.994402,33.247875,20.716179,42.032974,44.068203,40,40.273502,38.5,37.839333,30.39183,42.407211,39.045753,45.367584,44.182205,46.39241,38.573936,33,46.96526,35.782169,47.650589,41.5,44,39.833851,34.307144,39.876019,43,40.367474,36.084621,44,41.203323,41.700001,33.836082,44.5,35.860119,31,39.41922,37.926868,44,47.751076,44.5,39,43.07597],"lon":[-153.369141,-86.902298,-92.199997,-111.093735,-119.417931,-105.358887,-72.699997,-75.2,-75.5,-81.760254,-83.441162,-158.214676,-93.581543,-114.742043,-89,-86.126976,-98,-84.27002,-92.329102,-71.382439,-76.641273,-68.972168,-84.506836,-94.63623,-92.60376,-90,-109.533691,-80.793457,-100.437012,-100,-71.5,-74.871826,-106.018066,-117.224121,-75,-82.996216,-96.921387,-120.5,-77.194527,-71.5,-81.163727,-100,-86.660156,-100,-111.950684,-78.024902,-72.699997,-120.740135,-89.5,-80.5,-107.290283],"frame":null},{"type":"scattergeo","mode":"markers","opacity":0,"hoverinfo":"none","showlegend":false,"marker":{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"cmin":1,"cmax":47,"colorscale":[["0","rgba(255,245,240,1)"],["0.0416666666666667","rgba(255,238,230,1)"],["0.0833333333333333","rgba(255,231,220,1)"],["0.125","rgba(254,224,210,1)"],["0.166666666666667","rgba(254,212,193,1)"],["0.208333333333333","rgba(253,199,177,1)"],["0.25","rgba(252,187,161,1)"],["0.291666666666667","rgba(253,174,145,1)"],["0.333333333333333","rgba(253,160,129,1)"],["0.375","rgba(252,146,114,1)"],["0.416666666666667","rgba(252,133,101,1)"],["0.458333333333333","rgba(252,120,87,1)"],["0.5","rgba(251,106,74,1)"],["0.541666666666667","rgba(247,92,64,1)"],["0.583333333333333","rgba(243,77,54,1)"],["0.625","rgba(239,59,44,1)"],["0.666666666666667","rgba(227,49,39,1)"],["0.708333333333333","rgba(215,37,34,1)"],["0.75","rgba(203,24,29,1)"],["0.791666666666667","rgba(190,21,26,1)"],["0.833333333333333","rgba(178,18,24,1)"],["0.875","rgba(165,15,21,1)"],["0.916666666666667","rgba(144,9,19,1)"],["0.958333333333333","rgba(123,3,16,1)"],["1","rgba(103,0,13,1)"]],"showscale":true,"color":[1,47],"line":{"color":"rgba(255,127,14,1)"}},"lat":[20.716179,66.160507],"lon":[-158.214676,-68.972168],"geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+</article></slide><slide class=""><hgroup><h2>States with the Most Breweries</h2></hgroup><article  id="states-with-the-most-breweries" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-2-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>States with the least Breweries</h2></hgroup><article  id="states-with-the-least-breweries" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-3-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>Statistics by State</h2></hgroup><article  id="statistics-by-state" class="smaller ">
+
+<div id="htmlwidget-517b595503895a8a5b48" style="width:720px;height:432px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-517b595503895a8a5b48">{"x":{"visdat":{"65b87bb1391b":["function () ","plotlyVisDat"]},"cur_data":"65b87bb1391b","attrs":{"65b87bb1391b":{"locationmode":"USA-states","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":[-153.369141,-86.902298,-92.199997,-111.093735,-119.417931,-105.358887,-72.699997,-75.2,-75.5,-81.760254,-83.441162,-158.214676,-93.581543,-114.742043,-89,-86.126976,-98,-84.27002,-92.329102,-71.382439,-76.641273,-68.972168,-84.506836,-94.63623,-92.60376,-90,-109.533691,-80.793457,-100.437012,-100,-71.5,-74.871826,-106.018066,-117.224121,-75,-82.996216,-96.921387,-120.5,-77.194527,-71.5,-81.163727,-100,-86.660156,-100,-111.950684,-78.024902,-72.699997,-120.740135,-89.5,-80.5,-107.290283],"y":[66.160507,32.31823,34.799999,34.048927,36.778259,39.113014,41.599998,39,39,27.994402,33.247875,20.716179,42.032974,44.068203,40,40.273502,38.5,37.839333,30.39183,42.407211,39.045753,45.367584,44.182205,46.39241,38.573936,33,46.96526,35.782169,47.650589,41.5,44,39.833851,34.307144,39.876019,43,40.367474,36.084621,44,41.203323,41.700001,33.836082,44.5,35.860119,31,39.41922,37.926868,44,47.751076,44.5,39,43.07597],"type":"scatter","mode":"markers","size":[40.8823529411765,51.2222222222222,39,35.2083333333333,46.2814814814815,47.4315068493151,40.8333333333333,55.25,52,46.7567567567568,46.2857142857143,32.6666666666667,33.2,55.1176470588235,41.4615384615385,42.989010989011,36.6842105263158,40.7142857142857,33,38,36.8,52.8571428571429,36.7368421052632,49.9565217391304,32.4827586206897,46.4545454545455,41.695652173913,43.3,40.3333333333333,30.6666666666667,48.5,46.375,57,46.5,46,44.1875,40.7272727272727,47.9425287356322,42.4468085106383,31.55,30.2,null,41.6,40.3932584269663,45.5454545454545,45.3714285714286,42.2941176470588,44.9767441860465,26.547619047619,57.5,32.0833333333333],"color":[0.05564,0.062,0.052,0.0602272727272727,0.0610824175824176,0.063372,0.0610740740740741,0.065625,0.055,0.0599464285714286,0.056375,0.0572962962962963,0.0595,0.0607,0.062021978021978,0.0633941605839416,0.0560869565217391,0.0646,0.0555263157894737,0.0556829268292683,0.0590476190476191,0.0578148148148148,0.0633774834437086,0.0602181818181818,0.0547948717948718,0.0589090909090909,0.0564871794871795,0.0600363636363636,0.054,0.058047619047619,0.052375,0.057375,0.0610769230769231,0.0669,0.0572191780821918,0.0619591836734694,0.0594736842105263,0.057064,0.0601443298969072,0.057037037037037,0.0607142857142857,0.0592857142857143,0.0551666666666667,0.0598387096774194,0.0518846153846154,0.05705,0.0603703703703704,0.0577941176470588,0.0540588235294118,0.062,0.0548666666666667],"colors":"Reds","hoverinfo":"text","text":["State : AK<br />Population =   2,454,636<br />Breweries Count : 7<br />Mean ABV : 5.56 %<br />Mean IBU : 40.88","State : AL<br />Population =  16,936,626<br />Breweries Count : 3<br />Mean ABV : 6.20 %<br />Mean IBU : 51.22","State : AR<br />Population =  10,389,634<br />Breweries Count : 2<br />Mean ABV : 5.20 %<br />Mean IBU : 39","State : AZ<br />Population =  24,745,828<br />Breweries Count : 11<br />Mean ABV : 6.02 %<br />Mean IBU : 35.21","State : CA<br />Population = 136,585,470<br />Breweries Count : 39<br />Mean ABV : 6.11 %<br />Mean IBU : 46.28","State : CO<br />Population =  19,674,750<br />Breweries Count : 47<br />Mean ABV : 6.34 %<br />Mean IBU : 47.43","State : CT<br />Population =  12,483,198<br />Breweries Count : 8<br />Mean ABV : 6.11 %<br />Mean IBU : 40.83","State : DC<br />Population =   2,474,750<br />Breweries Count : 1<br />Mean ABV : 6.56 %<br />Mean IBU : 55.25","State : DE<br />Population =   3,373,472<br />Breweries Count : 2<br />Mean ABV : 5.50 %<br />Mean IBU : 52","State : FL<br />Population =  75,023,872<br />Breweries Count : 15<br />Mean ABV : 5.99 %<br />Mean IBU : 46.76","State : GA<br />Population =  35,967,464<br />Breweries Count : 7<br />Mean ABV : 5.64 %<br />Mean IBU : 46.29","State : HI<br />Population =   4,808,406<br />Breweries Count : 4<br />Mean ABV : 5.73 %<br />Mean IBU : 32.67","State : IA<br />Population =  10,877,898<br />Breweries Count : 5<br />Mean ABV : 5.95 %<br />Mean IBU : 33.2","State : ID<br />Population =   5,969,748<br />Breweries Count : 5<br />Mean ABV : 6.07 %<br />Mean IBU : 55.12","State : IL<br />Population =  44,173,212<br />Breweries Count : 18<br />Mean ABV : 6.20 %<br />Mean IBU : 41.46","State : IN<br />Population =  23,057,116<br />Breweries Count : 22<br />Mean ABV : 6.34 %<br />Mean IBU : 42.99","State : KS<br />Population =   9,897,734<br />Breweries Count : 3<br />Mean ABV : 5.61 %<br />Mean IBU : 36.68","State : KY<br />Population =  15,441,770<br />Breweries Count : 4<br />Mean ABV : 6.46 %<br />Mean IBU : 40.71","State : LA<br />Population =  16,037,990<br />Breweries Count : 5<br />Mean ABV : 5.55 %<br />Mean IBU : 33","State : MA<br />Population =  24,232,282<br />Breweries Count : 23<br />Mean ABV : 5.57 %<br />Mean IBU : 38","State : MD<br />Population =  20,897,730<br />Breweries Count : 7<br />Mean ABV : 5.90 %<br />Mean IBU : 36.8","State : ME<br />Population =   4,752,558<br />Breweries Count : 9<br />Mean ABV : 5.78 %<br />Mean IBU : 52.86","State : MI<br />Population =  34,834,650<br />Breweries Count : 32<br />Mean ABV : 6.34 %<br />Mean IBU : 36.74","State : MN<br />Population =  19,406,534<br />Breweries Count : 12<br />Mean ABV : 6.02 %<br />Mean IBU : 49.96","State : MO<br />Population =  21,212,060<br />Breweries Count : 9<br />Mean ABV : 5.48 %<br />Mean IBU : 32.48","State : MS<br />Population =  10,229,714<br />Breweries Count : 2<br />Mean ABV : 5.89 %<br />Mean IBU : 46.45","State : MT<br />Population =   3,697,354<br />Breweries Count : 9<br />Mean ABV : 5.65 %<br />Mean IBU : 41.7","State : NC<br />Population =  35,719,138<br />Breweries Count : 19<br />Mean ABV : 6.00 %<br />Mean IBU : 43.3","State : ND<br />Population =   2,588,920<br />Breweries Count : 1<br />Mean ABV : 5.40 %<br />Mean IBU : 40.33","State : NE<br />Population =   6,574,864<br />Breweries Count : 5<br />Mean ABV : 5.80 %<br />Mean IBU : 30.67","State : NH<br />Population =   4,793,578<br />Breweries Count : 3<br />Mean ABV : 5.24 %<br />Mean IBU : 48.5","State : NJ<br />Population =  31,050,782<br />Breweries Count : 3<br />Mean ABV : 5.74 %<br />Mean IBU : 46.38","State : NM<br />Population =   7,205,008<br />Breweries Count : 4<br />Mean ABV : 6.11 %<br />Mean IBU : 57","State : NV<br />Population =  10,519,028<br />Breweries Count : 2<br />Mean ABV : 6.69 %<br />Mean IBU : 46.5","State : NY<br />Population =  68,440,242<br />Breweries Count : 16<br />Mean ABV : 5.72 %<br />Mean IBU : 46","State : OH<br />Population =  40,614,318<br />Breweries Count : 15<br />Mean ABV : 6.20 %<br />Mean IBU : 44.19","State : OK<br />Population =  13,466,544<br />Breweries Count : 6<br />Mean ABV : 5.95 %<br />Mean IBU : 40.73","State : OR<br />Population =  14,707,246<br />Breweries Count : 29<br />Mean ABV : 5.71 %<br />Mean IBU : 47.94","State : PA<br />Population =  44,880,334<br />Breweries Count : 25<br />Mean ABV : 6.01 %<br />Mean IBU : 42.45","State : RI<br />Population =   3,699,368<br />Breweries Count : 5<br />Mean ABV : 5.70 %<br />Mean IBU : 31.55","State : SC<br />Population =  17,577,266<br />Breweries Count : 4<br />Mean ABV : 6.07 %<br />Mean IBU : 30.2","State : SD<br />Population =   3,008,726<br />Breweries Count : 1<br />Mean ABV : 5.93 %<br />Mean IBU : NaN","State : TN<br />Population =  23,483,862<br />Breweries Count : 3<br />Mean ABV : 5.52 %<br />Mean IBU : 41.6","State : TX<br />Population =  97,218,612<br />Breweries Count : 28<br />Mean ABV : 5.98 %<br />Mean IBU : 40.39","State : UT<br />Population =  10,476,758<br />Breweries Count : 4<br />Mean ABV : 5.19 %<br />Mean IBU : 45.55","State : VA<br />Population =  29,206,114<br />Breweries Count : 16<br />Mean ABV : 5.71 %<br />Mean IBU : 45.37","State : VT<br />Population =   2,207,232<br />Breweries Count : 10<br />Mean ABV : 6.04 %<br />Mean IBU : 42.29","State : WA<br />Population =  26,085,110<br />Breweries Count : 23<br />Mean ABV : 5.78 %<br />Mean IBU : 44.98","State : WI<br />Population =  20,219,824<br />Breweries Count : 20<br />Mean ABV : 5.41 %<br />Mean IBU : 26.55","State : WV<br />Population =   6,359,364<br />Breweries Count : 1<br />Mean ABV : 6.20 %<br />Mean IBU : 57.5","State : WY<br />Population =   1,986,214<br />Breweries Count : 4<br />Mean ABV : 5.49 %<br />Mean IBU : 32.08"],"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"mapType":"geo","title":"(Marker Size = IBU, Color = ABV)","geo":{"domain":{"x":[0,1],"y":[0,1]},"scope":"usa","projection":{"type":"albers usa"},"showland":true,"landcolor":"#B1B3B3","showlakes":true,"lakecolor":"#13294B","subunitcolor":"#C8102EC8","countrycolor":"#B1B3B3","contrywidth":0.5,"subunitwidth":0.5},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"showSendToCloud":false},"data":[{"locationmode":"USA-states","type":"scattergeo","mode":"markers","hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"text":["State : AK<br />Population =   2,454,636<br />Breweries Count : 7<br />Mean ABV : 5.56 %<br />Mean IBU : 40.88","State : AL<br />Population =  16,936,626<br />Breweries Count : 3<br />Mean ABV : 6.20 %<br />Mean IBU : 51.22","State : AR<br />Population =  10,389,634<br />Breweries Count : 2<br />Mean ABV : 5.20 %<br />Mean IBU : 39","State : AZ<br />Population =  24,745,828<br />Breweries Count : 11<br />Mean ABV : 6.02 %<br />Mean IBU : 35.21","State : CA<br />Population = 136,585,470<br />Breweries Count : 39<br />Mean ABV : 6.11 %<br />Mean IBU : 46.28","State : CO<br />Population =  19,674,750<br />Breweries Count : 47<br />Mean ABV : 6.34 %<br />Mean IBU : 47.43","State : CT<br />Population =  12,483,198<br />Breweries Count : 8<br />Mean ABV : 6.11 %<br />Mean IBU : 40.83","State : DC<br />Population =   2,474,750<br />Breweries Count : 1<br />Mean ABV : 6.56 %<br />Mean IBU : 55.25","State : DE<br />Population =   3,373,472<br />Breweries Count : 2<br />Mean ABV : 5.50 %<br />Mean IBU : 52","State : FL<br />Population =  75,023,872<br />Breweries Count : 15<br />Mean ABV : 5.99 %<br />Mean IBU : 46.76","State : GA<br />Population =  35,967,464<br />Breweries Count : 7<br />Mean ABV : 5.64 %<br />Mean IBU : 46.29","State : HI<br />Population =   4,808,406<br />Breweries Count : 4<br />Mean ABV : 5.73 %<br />Mean IBU : 32.67","State : IA<br />Population =  10,877,898<br />Breweries Count : 5<br />Mean ABV : 5.95 %<br />Mean IBU : 33.2","State : ID<br />Population =   5,969,748<br />Breweries Count : 5<br />Mean ABV : 6.07 %<br />Mean IBU : 55.12","State : IL<br />Population =  44,173,212<br />Breweries Count : 18<br />Mean ABV : 6.20 %<br />Mean IBU : 41.46","State : IN<br />Population =  23,057,116<br />Breweries Count : 22<br />Mean ABV : 6.34 %<br />Mean IBU : 42.99","State : KS<br />Population =   9,897,734<br />Breweries Count : 3<br />Mean ABV : 5.61 %<br />Mean IBU : 36.68","State : KY<br />Population =  15,441,770<br />Breweries Count : 4<br />Mean ABV : 6.46 %<br />Mean IBU : 40.71","State : LA<br />Population =  16,037,990<br />Breweries Count : 5<br />Mean ABV : 5.55 %<br />Mean IBU : 33","State : MA<br />Population =  24,232,282<br />Breweries Count : 23<br />Mean ABV : 5.57 %<br />Mean IBU : 38","State : MD<br />Population =  20,897,730<br />Breweries Count : 7<br />Mean ABV : 5.90 %<br />Mean IBU : 36.8","State : ME<br />Population =   4,752,558<br />Breweries Count : 9<br />Mean ABV : 5.78 %<br />Mean IBU : 52.86","State : MI<br />Population =  34,834,650<br />Breweries Count : 32<br />Mean ABV : 6.34 %<br />Mean IBU : 36.74","State : MN<br />Population =  19,406,534<br />Breweries Count : 12<br />Mean ABV : 6.02 %<br />Mean IBU : 49.96","State : MO<br />Population =  21,212,060<br />Breweries Count : 9<br />Mean ABV : 5.48 %<br />Mean IBU : 32.48","State : MS<br />Population =  10,229,714<br />Breweries Count : 2<br />Mean ABV : 5.89 %<br />Mean IBU : 46.45","State : MT<br />Population =   3,697,354<br />Breweries Count : 9<br />Mean ABV : 5.65 %<br />Mean IBU : 41.7","State : NC<br />Population =  35,719,138<br />Breweries Count : 19<br />Mean ABV : 6.00 %<br />Mean IBU : 43.3","State : ND<br />Population =   2,588,920<br />Breweries Count : 1<br />Mean ABV : 5.40 %<br />Mean IBU : 40.33","State : NE<br />Population =   6,574,864<br />Breweries Count : 5<br />Mean ABV : 5.80 %<br />Mean IBU : 30.67","State : NH<br />Population =   4,793,578<br />Breweries Count : 3<br />Mean ABV : 5.24 %<br />Mean IBU : 48.5","State : NJ<br />Population =  31,050,782<br />Breweries Count : 3<br />Mean ABV : 5.74 %<br />Mean IBU : 46.38","State : NM<br />Population =   7,205,008<br />Breweries Count : 4<br />Mean ABV : 6.11 %<br />Mean IBU : 57","State : NV<br />Population =  10,519,028<br />Breweries Count : 2<br />Mean ABV : 6.69 %<br />Mean IBU : 46.5","State : NY<br />Population =  68,440,242<br />Breweries Count : 16<br />Mean ABV : 5.72 %<br />Mean IBU : 46","State : OH<br />Population =  40,614,318<br />Breweries Count : 15<br />Mean ABV : 6.20 %<br />Mean IBU : 44.19","State : OK<br />Population =  13,466,544<br />Breweries Count : 6<br />Mean ABV : 5.95 %<br />Mean IBU : 40.73","State : OR<br />Population =  14,707,246<br />Breweries Count : 29<br />Mean ABV : 5.71 %<br />Mean IBU : 47.94","State : PA<br />Population =  44,880,334<br />Breweries Count : 25<br />Mean ABV : 6.01 %<br />Mean IBU : 42.45","State : RI<br />Population =   3,699,368<br />Breweries Count : 5<br />Mean ABV : 5.70 %<br />Mean IBU : 31.55","State : SC<br />Population =  17,577,266<br />Breweries Count : 4<br />Mean ABV : 6.07 %<br />Mean IBU : 30.2","State : SD<br />Population =   3,008,726<br />Breweries Count : 1<br />Mean ABV : 5.93 %<br />Mean IBU : NaN","State : TN<br />Population =  23,483,862<br />Breweries Count : 3<br />Mean ABV : 5.52 %<br />Mean IBU : 41.6","State : TX<br />Population =  97,218,612<br />Breweries Count : 28<br />Mean ABV : 5.98 %<br />Mean IBU : 40.39","State : UT<br />Population =  10,476,758<br />Breweries Count : 4<br />Mean ABV : 5.19 %<br />Mean IBU : 45.55","State : VA<br />Population =  29,206,114<br />Breweries Count : 16<br />Mean ABV : 5.71 %<br />Mean IBU : 45.37","State : VT<br />Population =   2,207,232<br />Breweries Count : 10<br />Mean ABV : 6.04 %<br />Mean IBU : 42.29","State : WA<br />Population =  26,085,110<br />Breweries Count : 23<br />Mean ABV : 5.78 %<br />Mean IBU : 44.98","State : WI<br />Population =  20,219,824<br />Breweries Count : 20<br />Mean ABV : 5.41 %<br />Mean IBU : 26.55","State : WV<br />Population =   6,359,364<br />Breweries Count : 1<br />Mean ABV : 6.20 %<br />Mean IBU : 57.5","State : WY<br />Population =   1,986,214<br />Breweries Count : 4<br />Mean ABV : 5.49 %<br />Mean IBU : 32.08"],"marker":{"colorbar":{"title":"","ticklen":2},"cmin":0.0518846153846154,"cmax":0.0669,"colorscale":[["0","rgba(255,245,240,1)"],["0.0416666666666668","rgba(255,238,230,1)"],["0.0833333333333335","rgba(255,231,220,1)"],["0.125","rgba(254,224,210,1)"],["0.166666666666667","rgba(254,212,193,1)"],["0.208333333333333","rgba(253,199,177,1)"],["0.25","rgba(252,187,161,1)"],["0.291666666666667","rgba(253,174,145,1)"],["0.333333333333333","rgba(253,160,129,1)"],["0.375","rgba(252,146,114,1)"],["0.416666666666667","rgba(252,133,101,1)"],["0.458333333333333","rgba(252,120,87,1)"],["0.5","rgba(251,106,74,1)"],["0.541666666666667","rgba(247,92,64,1)"],["0.583333333333333","rgba(243,77,54,1)"],["0.625","rgba(239,59,44,1)"],["0.666666666666667","rgba(227,49,39,1)"],["0.708333333333334","rgba(215,37,34,1)"],["0.75","rgba(203,24,29,1)"],["0.791666666666667","rgba(190,21,26,1)"],["0.833333333333334","rgba(178,18,24,1)"],["0.875","rgba(165,15,21,1)"],["0.916666666666667","rgba(144,9,19,1)"],["0.958333333333333","rgba(123,3,16,1)"],["1","rgba(103,0,13,1)"]],"showscale":false,"color":[0.05564,0.062,0.052,0.0602272727272727,0.0610824175824176,0.063372,0.0610740740740741,0.065625,0.055,0.0599464285714286,0.056375,0.0572962962962963,0.0595,0.0607,0.062021978021978,0.0633941605839416,0.0560869565217391,0.0646,0.0555263157894737,0.0556829268292683,0.0590476190476191,0.0578148148148148,0.0633774834437086,0.0602181818181818,0.0547948717948718,0.0589090909090909,0.0564871794871795,0.0600363636363636,0.054,0.058047619047619,0.052375,0.057375,0.0610769230769231,0.0669,0.0572191780821918,0.0619591836734694,0.0594736842105263,0.057064,0.0601443298969072,0.057037037037037,0.0607142857142857,0.0592857142857143,0.0551666666666667,0.0598387096774194,0.0518846153846154,0.05705,0.0603703703703704,0.0577941176470588,0.0540588235294118,0.062,0.0548666666666667],"size":[51.6809954751131,81.7461538461538,46.2076923076923,35.1826923076923,67.38,70.7239199157007,51.5384615384615,93.4576923076923,84.0076923076923,68.7619542619543,67.3923076923077,27.7923076923077,29.3430769230769,93.072850678733,53.3650887573964,57.8065088757396,39.4740890688259,51.1923076923077,28.7615384615385,43.3,39.8107692307692,86.5,39.6271255060729,78.0658862876254,27.2575596816976,67.8832167832168,54.0458193979933,58.7107692307692,50.0846153846154,21.9769230769231,73.8307692307692,67.6519230769231,98.5461538461538,68.0153846153846,66.5615384615385,61.2913461538462,51.2300699300699,72.2098143236074,56.2299509001637,24.5453846153846,20.62,null,53.7676923076923,50.2588591184097,65.2398601398602,64.7338461538462,55.7859728506787,63.5862254025045,10,100,26.0961538461539],"sizemode":"area","line":{"colorbar":{"title":"","ticklen":2},"cmin":0.0518846153846154,"cmax":0.0669,"colorscale":[["0","rgba(255,245,240,1)"],["0.0416666666666668","rgba(255,238,230,1)"],["0.0833333333333335","rgba(255,231,220,1)"],["0.125","rgba(254,224,210,1)"],["0.166666666666667","rgba(254,212,193,1)"],["0.208333333333333","rgba(253,199,177,1)"],["0.25","rgba(252,187,161,1)"],["0.291666666666667","rgba(253,174,145,1)"],["0.333333333333333","rgba(253,160,129,1)"],["0.375","rgba(252,146,114,1)"],["0.416666666666667","rgba(252,133,101,1)"],["0.458333333333333","rgba(252,120,87,1)"],["0.5","rgba(251,106,74,1)"],["0.541666666666667","rgba(247,92,64,1)"],["0.583333333333333","rgba(243,77,54,1)"],["0.625","rgba(239,59,44,1)"],["0.666666666666667","rgba(227,49,39,1)"],["0.708333333333334","rgba(215,37,34,1)"],["0.75","rgba(203,24,29,1)"],["0.791666666666667","rgba(190,21,26,1)"],["0.833333333333334","rgba(178,18,24,1)"],["0.875","rgba(165,15,21,1)"],["0.916666666666667","rgba(144,9,19,1)"],["0.958333333333333","rgba(123,3,16,1)"],["1","rgba(103,0,13,1)"]],"showscale":false,"color":[0.05564,0.062,0.052,0.0602272727272727,0.0610824175824176,0.063372,0.0610740740740741,0.065625,0.055,0.0599464285714286,0.056375,0.0572962962962963,0.0595,0.0607,0.062021978021978,0.0633941605839416,0.0560869565217391,0.0646,0.0555263157894737,0.0556829268292683,0.0590476190476191,0.0578148148148148,0.0633774834437086,0.0602181818181818,0.0547948717948718,0.0589090909090909,0.0564871794871795,0.0600363636363636,0.054,0.058047619047619,0.052375,0.057375,0.0610769230769231,0.0669,0.0572191780821918,0.0619591836734694,0.0594736842105263,0.057064,0.0601443298969072,0.057037037037037,0.0607142857142857,0.0592857142857143,0.0551666666666667,0.0598387096774194,0.0518846153846154,0.05705,0.0603703703703704,0.0577941176470588,0.0540588235294118,0.062,0.0548666666666667]}},"textfont":{"size":[51.6809954751131,81.7461538461538,46.2076923076923,35.1826923076923,67.38,70.7239199157007,51.5384615384615,93.4576923076923,84.0076923076923,68.7619542619543,67.3923076923077,27.7923076923077,29.3430769230769,93.072850678733,53.3650887573964,57.8065088757396,39.4740890688259,51.1923076923077,28.7615384615385,43.3,39.8107692307692,86.5,39.6271255060729,78.0658862876254,27.2575596816976,67.8832167832168,54.0458193979933,58.7107692307692,50.0846153846154,21.9769230769231,73.8307692307692,67.6519230769231,98.5461538461538,68.0153846153846,66.5615384615385,61.2913461538462,51.2300699300699,72.2098143236074,56.2299509001637,24.5453846153846,20.62,null,53.7676923076923,50.2588591184097,65.2398601398602,64.7338461538462,55.7859728506787,63.5862254025045,10,100,26.0961538461539]},"geo":"geo","lat":[66.160507,32.31823,34.799999,34.048927,36.778259,39.113014,41.599998,39,39,27.994402,33.247875,20.716179,42.032974,44.068203,40,40.273502,38.5,37.839333,30.39183,42.407211,39.045753,45.367584,44.182205,46.39241,38.573936,33,46.96526,35.782169,47.650589,41.5,44,39.833851,34.307144,39.876019,43,40.367474,36.084621,44,41.203323,41.700001,33.836082,44.5,35.860119,31,39.41922,37.926868,44,47.751076,44.5,39,43.07597],"lon":[-153.369141,-86.902298,-92.199997,-111.093735,-119.417931,-105.358887,-72.699997,-75.2,-75.5,-81.760254,-83.441162,-158.214676,-93.581543,-114.742043,-89,-86.126976,-98,-84.27002,-92.329102,-71.382439,-76.641273,-68.972168,-84.506836,-94.63623,-92.60376,-90,-109.533691,-80.793457,-100.437012,-100,-71.5,-74.871826,-106.018066,-117.224121,-75,-82.996216,-96.921387,-120.5,-77.194527,-71.5,-81.163727,-100,-86.660156,-100,-111.950684,-78.024902,-72.699997,-120.740135,-89.5,-80.5,-107.290283],"frame":null},{"type":"scattergeo","mode":"markers","opacity":0,"hoverinfo":"none","showlegend":false,"marker":{"colorbar":{"title":"","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"cmin":0.0518846153846154,"cmax":0.0669,"colorscale":[["0","rgba(255,245,240,1)"],["0.0416666666666668","rgba(255,238,230,1)"],["0.0833333333333335","rgba(255,231,220,1)"],["0.125","rgba(254,224,210,1)"],["0.166666666666667","rgba(254,212,193,1)"],["0.208333333333333","rgba(253,199,177,1)"],["0.25","rgba(252,187,161,1)"],["0.291666666666667","rgba(253,174,145,1)"],["0.333333333333333","rgba(253,160,129,1)"],["0.375","rgba(252,146,114,1)"],["0.416666666666667","rgba(252,133,101,1)"],["0.458333333333333","rgba(252,120,87,1)"],["0.5","rgba(251,106,74,1)"],["0.541666666666667","rgba(247,92,64,1)"],["0.583333333333333","rgba(243,77,54,1)"],["0.625","rgba(239,59,44,1)"],["0.666666666666667","rgba(227,49,39,1)"],["0.708333333333334","rgba(215,37,34,1)"],["0.75","rgba(203,24,29,1)"],["0.791666666666667","rgba(190,21,26,1)"],["0.833333333333334","rgba(178,18,24,1)"],["0.875","rgba(165,15,21,1)"],["0.916666666666667","rgba(144,9,19,1)"],["0.958333333333333","rgba(123,3,16,1)"],["1","rgba(103,0,13,1)"]],"showscale":true,"color":[0.0518846153846154,0.0669],"line":{"color":"rgba(255,127,14,1)"}},"lat":[20.716179,66.160507],"lon":[-158.214676,-68.972168],"geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+</article></slide><slide class=""><hgroup><h2>Median AVB &amp; IBU by State</h2></hgroup><article  id="median-avb-ibu-by-state" class="smaller ">
+
+<div id="htmlwidget-d6b0e4178a1c73374065" style="width:720px;height:432px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d6b0e4178a1c73374065">{"x":{"visdat":{"65b84ef454bf":["function () ","plotlyVisDat"]},"cur_data":"65b84ef454bf","attrs":{"65b84ef454bf":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"],"y":[56,60,52,55,58,60.5,60,62.5,55,57,55,54,55.5,56.5,58,58,50,62.5,52,54,58,51,62,56,52,58,55,57,50,56,55,46,62,60,55,58,60,56,57,55,55,60,57,55,40,56.5,55,55.5,52,62,50],"type":"bar","name":"ABV","text":["Median ABV: 5.6%","Median ABV: 6%","Median ABV: 5.2%","Median ABV: 5.5%","Median ABV: 5.8%","Median ABV: 6.05%","Median ABV: 6%","Median ABV: 6.25%","Median ABV: 5.5%","Median ABV: 5.7%","Median ABV: 5.5%","Median ABV: 5.4%","Median ABV: 5.55%","Median ABV: 5.65%","Median ABV: 5.8%","Median ABV: 5.8%","Median ABV: 5%","Median ABV: 6.25%","Median ABV: 5.2%","Median ABV: 5.4%","Median ABV: 5.8%","Median ABV: 5.1%","Median ABV: 6.2%","Median ABV: 5.6%","Median ABV: 5.2%","Median ABV: 5.8%","Median ABV: 5.5%","Median ABV: 5.7%","Median ABV: 5%","Median ABV: 5.6%","Median ABV: 5.5%","Median ABV: 4.6%","Median ABV: 6.2%","Median ABV: 6%","Median ABV: 5.5%","Median ABV: 5.8%","Median ABV: 6%","Median ABV: 5.6%","Median ABV: 5.7%","Median ABV: 5.5%","Median ABV: 5.5%","Median ABV: 6%","Median ABV: 5.7%","Median ABV: 5.5%","Median ABV: 4%","Median ABV: 5.65%","Median ABV: 5.5%","Median ABV: 5.55%","Median ABV: 5.2%","Median ABV: 6.2%","Median ABV: 5%"],"textposition":"auto","marker":{"color":"#C8102EC8","line":{"color":"#B1B3B3","width":1.5}},"inherit":true},"65b84ef454bf.1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"],"y":[46,43,39,20.5,42,40,29,47.5,52,55,55,22.5,26,39,30,33,20,31.5,31.5,35,29,61,35,44.5,24,45,40,33.5,32,35,48.5,34.5,51,41,47,40,35,40,30,24,30,null,37,33,34,42,30,38,19,57.5,21],"type":"bar","name":"IBU","text":["Median IBU: 46","Median IBU: 43","Median IBU: 39","Median IBU: 20.5","Median IBU: 42","Median IBU: 40","Median IBU: 29","Median IBU: 47.5","Median IBU: 52","Median IBU: 55","Median IBU: 55","Median IBU: 22.5","Median IBU: 26","Median IBU: 39","Median IBU: 30","Median IBU: 33","Median IBU: 20","Median IBU: 31.5","Median IBU: 31.5","Median IBU: 35","Median IBU: 29","Median IBU: 61","Median IBU: 35","Median IBU: 44.5","Median IBU: 24","Median IBU: 45","Median IBU: 40","Median IBU: 33.5","Median IBU: 32","Median IBU: 35","Median IBU: 48.5","Median IBU: 34.5","Median IBU: 51","Median IBU: 41","Median IBU: 47","Median IBU: 40","Median IBU: 35","Median IBU: 40","Median IBU: 30","Median IBU: 24","Median IBU: 30","Median IBU: NA","Median IBU: 37","Median IBU: 33","Median IBU: 34","Median IBU: 42","Median IBU: 30","Median IBU: 38","Median IBU: 19","Median IBU: 57.5","Median IBU: 21"],"textposition":"auto","marker":{"color":"#13294B","line":{"color":"#B1B3B3","width":1.5}},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Median ABV (Adjusted) and IBU by State","barmode":"group","xaxis":{"domain":[0,1],"automargin":true,"title":[],"type":"category","categoryorder":"array","categoryarray":["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"]},"yaxis":{"domain":[0,1],"automargin":true,"title":[]},"hovermode":"closest","showlegend":true},"source":"A","config":{"showSendToCloud":false},"data":[{"x":["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VA","VT","WA","WI","WV","WY"],"y":[56,60,52,55,58,60.5,60,62.5,55,57,55,54,55.5,56.5,58,58,50,62.5,52,54,58,51,62,56,52,58,55,57,50,56,55,46,62,60,55,58,60,56,57,55,55,60,57,55,40,56.5,55,55.5,52,62,50],"type":"bar","name":"ABV","text":["Median ABV: 5.6%","Median ABV: 6%","Median ABV: 5.2%","Median ABV: 5.5%","Median ABV: 5.8%","Median ABV: 6.05%","Median ABV: 6%","Median ABV: 6.25%","Median ABV: 5.5%","Median ABV: 5.7%","Median ABV: 5.5%","Median ABV: 5.4%","Median ABV: 5.55%","Median ABV: 5.65%","Median ABV: 5.8%","Median ABV: 5.8%","Median ABV: 5%","Median ABV: 6.25%","Median ABV: 5.2%","Median ABV: 5.4%","Median ABV: 5.8%","Median ABV: 5.1%","Median ABV: 6.2%","Median ABV: 5.6%","Median ABV: 5.2%","Median ABV: 5.8%","Median ABV: 5.5%","Median ABV: 5.7%","Median ABV: 5%","Median ABV: 5.6%","Median ABV: 5.5%","Median ABV: 4.6%","Median ABV: 6.2%","Median ABV: 6%","Median ABV: 5.5%","Median ABV: 5.8%","Median ABV: 6%","Median ABV: 5.6%","Median ABV: 5.7%","Median ABV: 5.5%","Median ABV: 5.5%","Median ABV: 6%","Median ABV: 5.7%","Median ABV: 5.5%","Median ABV: 4%","Median ABV: 5.65%","Median ABV: 5.5%","Median ABV: 5.55%","Median ABV: 5.2%","Median ABV: 6.2%","Median ABV: 5%"],"textposition":["auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto"],"marker":{"color":"#C8102EC8","line":{"color":"#B1B3B3","width":1.5}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":["AK","AL","AR","AZ","CA","CO","CT","DC","DE","FL","GA","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","RI","SC","TN","TX","UT","VA","VT","WA","WI","WV","WY"],"y":[46,43,39,20.5,42,40,29,47.5,52,55,55,22.5,26,39,30,33,20,31.5,31.5,35,29,61,35,44.5,24,45,40,33.5,32,35,48.5,34.5,51,41,47,40,35,40,30,24,30,37,33,34,42,30,38,19,57.5,21],"type":"bar","name":"IBU","text":["Median IBU: 46","Median IBU: 43","Median IBU: 39","Median IBU: 20.5","Median IBU: 42","Median IBU: 40","Median IBU: 29","Median IBU: 47.5","Median IBU: 52","Median IBU: 55","Median IBU: 55","Median IBU: 22.5","Median IBU: 26","Median IBU: 39","Median IBU: 30","Median IBU: 33","Median IBU: 20","Median IBU: 31.5","Median IBU: 31.5","Median IBU: 35","Median IBU: 29","Median IBU: 61","Median IBU: 35","Median IBU: 44.5","Median IBU: 24","Median IBU: 45","Median IBU: 40","Median IBU: 33.5","Median IBU: 32","Median IBU: 35","Median IBU: 48.5","Median IBU: 34.5","Median IBU: 51","Median IBU: 41","Median IBU: 47","Median IBU: 40","Median IBU: 35","Median IBU: 40","Median IBU: 30","Median IBU: 24","Median IBU: 30","Median IBU: 37","Median IBU: 33","Median IBU: 34","Median IBU: 42","Median IBU: 30","Median IBU: 38","Median IBU: 19","Median IBU: 57.5","Median IBU: 21"],"textposition":["auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto","auto"],"marker":{"color":"#13294B","line":{"color":"#B1B3B3","width":1.5}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+</article></slide><slide class=""><hgroup><h2>Highest Alcohol Beer by State</h2></hgroup><article  id="highest-alcohol-beer-by-state" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-6-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>Most Bitter Beer by State</h2></hgroup><article  id="most-bitter-beer-by-state" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-7-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>Alcohol By Volume Distribution</h2></hgroup><article  id="alcohol-by-volume-distribution" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-8-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>Alcohol By Volume Distribution</h2></hgroup><article  id="alcohol-by-volume-distribution-1" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-9-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>ABV and IBU Relationship</h2></hgroup><article  id="abv-and-ibu-relationship" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-10-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>IPAs vs Ales</h2></hgroup><article  id="ipas-vs-ales" class="smaller ">
+
+<div style="font-size:90%">
+<b>Classifications</b></div>
+
+<table style="width:25%">
+
+<blockquote>
+<tr>
+
+<td style="width:33%">
+
+</td>
+
+<td style="width:33%">
+
+<blockquote>
+<b>IPA</b>
+
+</td>
+
+<td style="width:33%">
+
+<blockquote>
+<b>ALE</b>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<b>IPA</b>
+
+</td>
+
+<td>
+
+88
+
+</td>
+
+<td>
+
+36
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<b>ALE</b>
+
+</td>
+
+<td>
+
+12
+
+</td>
+
+<td>
+
+149
+
+</td>
+
+</tr>
+</blockquote>
+</blockquote>
+</blockquote>
+
+</table>
+
+<br> <br>
+
+<table style="width:30%">
+
+<tr>
+
+<td style="font-size:75%">
+
+Accuracy : 83.15 %
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="font-size:75%">
+
+Misclass : 16.84 %
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="font-size:75%">
+
+Sensitivity : 88.00 %
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="font-size:75%">
+
+Specificity : 80.54 %
+
+</td>
+
+</tr>
+
+</table>
+
+</article></slide><slide class=""><hgroup><h2>Breweries per Capa (Top 10)</h2></hgroup><article  id="breweries-per-capa-top-10" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-12-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>Breweries per Capa (Bottom 10)</h2></hgroup><article  id="breweries-per-capa-bottom-10" class="smaller ">
+
+<p><img src="PresentationFile1_files/figure-html/unnamed-chunk-13-1.png" width="720" /></p>
+
+</article></slide><slide class=""><hgroup><h2>Conclusion</h2></hgroup><article  id="conclusion" class="smaller ">
+
+<ul>
+<li>Thank You for your time and attention.</li>
+</ul></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

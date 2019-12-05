@@ -4,9 +4,7 @@ author: "Home Team Data"
 date: "10/25/2019"
 output: 
   ioslides_presentation: 
-    css: Styles.css
-    logo: BudLogo.png
-    smaller: yes
+      smaller: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -67,7 +65,7 @@ BudBlack  = rgb(0,0,0, max = 255)
 <br>
 Thank You, Mr. Doukeris and Mr. Jamel for this and future opportunities to provide data insight and analysis for your team at Budweiser
 
-    
+Presentation: [Project 1](https://www.youtube.com/watch?v=RwETl6hMuu8&t=7s)     
 
 ## Review of Tasks
 
@@ -197,7 +195,6 @@ BeersData <- merge(BreweriesFile,BeerFile, by=c("Brewery_ID"))
 
 
 BeersByState <- group_by(BeersData, State)
-head(BeersByState)
 
 BeerStatsByState <- summarise(BeersByState,
                        abv_mean = mean(ABV, na.rm = TRUE),
@@ -327,7 +324,7 @@ ABVStats <- summarise(BeersData,
 
 bp <- ggplot(BeersData, aes(y = ABV)) +
   geom_boxplot(color = BudRed, fill = BudSilver) +
-  labs(title="Alcohol by Volume Distrabution Statistics", x="",y="ABV",fill="") +
+  labs(title="Alcohol by Volume Distribution Statistics", x="",y="ABV",fill="") +
   geom_text(data = ABVStats, aes(x = 0, y = ABVStats$mean_abv, 
                                  label = paste0("Mean: ",round(ABVStats$mean_abv*100,2),"%"))) +
   geom_text(data = ABVStats, aes(x = 0, y = ABVStats$med_abv,
