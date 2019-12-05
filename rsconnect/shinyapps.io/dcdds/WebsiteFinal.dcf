@@ -1,0 +1,13 @@
+name: WebsiteFinal
+title: WebsiteFinal
+username:
+account: dcdds
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1469855
+bundleId: 2587758
+url: https://dcdds.shinyapps.io/WebsiteFinal/
+when: 1573694967.66321
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: _site.yml|about.html|about.rmd|Beers.txt|BeersByState.csv|Breweries.txt|BudLogo.png|index.html|index.rmd|PresentationFile1.html|PresentationFile1.Rmd|README.md|states_lat_long.csv|Styles.css|Website Picture.jpg|PresentationFile1_files|site_libs
