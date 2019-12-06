@@ -44,7 +44,7 @@ Goals:
   - Develop Logistic Regression Model with RSME < $3,000
 <br>
 <br>
-Presentation: [Project 2](https://www.youtube.com/watch?v=kewQpR8ZgPQ)
+Presentation: [Project 2](https://www.youtube.com/watch?v=XnEKwkAcfhg&t=10s)
 <br>
 
 ## Review of Tasks
