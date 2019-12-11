@@ -65,7 +65,8 @@ BudBlack  = rgb(0,0,0, max = 255)
 <br>
 Thank You, Mr. Doukeris and Mr. Jamel for this and future opportunities to provide data insight and analysis for your team at Budweiser
 
-Presentation: [Project 1](https://www.youtube.com/watch?v=RwETl6hMuu8&t=7s)     
+- Presentation: [Project 1](https://www.youtube.com/watch?v=RwETl6hMuu8&t=7s)
+- Project App: [Breweries App](https://dcdds.shinyapps.io/BeerApp1/)
 
 ## Review of Tasks
 
